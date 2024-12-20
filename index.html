@@ -4,40 +4,46 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Calculator</title>
     <script src='./index.js' defer></script>
-    <link rel="stylesheet" src="./styles.css">
+    <link rel="stylesheet" href="./styles.css">
 </head>
 
 <body>
+    <main>
+        <!-- Top introduction section of code -->
+        <div class="brand">
+            <h1>The Calc!</h1>
+        </div>
+        <!-- displays whats been added to the ui -->
+        <div class="display"></div>
+        <!-- Function names -->
+        <div class="calcSect">
 
-    <!-- Top introduction section of code -->
-    <div>
-        <h1>The Calc!</h1>
-        <h4>For All Your Calculating Needs</h4>
-    </div>
-    <!-- Function names -->
-    <div class="calcSect">
-        <div class="functionsDiv">
-            <h1 id="add">+</h1>
-            <h1 id="minus">-</h1>
-            <h1 id="multiply">*</h1>
-            <h1 id="divide">/</h1>
-            <h1 class="equalTo" id="equalTo">=</h1>
+            <div class="numbersDiv">
+                <h1 id="one">1</h1>
+                <h1 id="two">2</h1>
+                <h1 id="three">3</h1>
+                <h1 id="four">4</h1>
+                <h1 id="five">5</h1>
+                <h1 id="six">6</h1>
+                <h1 id="seven">7</h1>
+                <h1 id="eight">8</h1>
+                <h1 id="nine">9</h1>
+                <h1 id="ten">0</h1>
+
+            </div>
+
+            <div class="functionsDiv">
+                <h1 id="add">+</h1>
+                <h1 id="minus">-</h1>
+                <h1 id="multiply">*</h1>
+                <h1 id="divide">/</h1>
+                <h1 class="equalTo" id="equalTo">=</h1>
+            </div>
+
         </div>
-        <div class="numbersDiv">
-            <h1 id="one">1</h1>
-            <h1 id="two">2</h1>
-            <h1 id="three">3</h1>
-            <h1 id="four">4</h1>
-            <h1 id="five">5</h1>
-            <h1 id="six">6</h1>
-            <h1 id="seven">7</h1>
-            <h1 id="eight">8</h1>
-            <h1 id="nine">9</h1>
-            <h1 id="ten">0</h1>
-        </div>
-    </div>
+    </main>
 </body>
 
 </html>
