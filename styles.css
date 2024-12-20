@@ -68,12 +68,36 @@ main {
     margin-top: 10px;
     margin-bottom: 5px;
     text-align: center;
-
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .functionsDiv {
     margin-left: auto;
     margin-right: 50px;
     background-color: blueviolet;
+    width: 150px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.functionsDiv h1 {
     width: 100px;
+    height: 50px;
+    background-color: rgb(228, 207, 247);
+    border-radius: 30px;
+    margin-top: 10px;
+    margin-bottom: 5px;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: xx-large;
+}
+
+#equalTo {
+    background-color: red;
+    color: white;
 }
