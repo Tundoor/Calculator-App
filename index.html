@@ -38,13 +38,13 @@
         </tr>
 
         <tr>
-            <td colspan="2">0</td>
+            <td colspan="2" onclick="digitBtnPressed('0')">0</td>
             <td onclick="btnACPressed()">AC</td>
             <td  onclick="operatorBtnPressed('/')">/</td>
         </tr>
 
         <tr >  
-            <td colspan="4">=</td>
+            <td colspan="4" onclick="equalsBtnPressed()">=</td>
         </tr>
     </table>
    
@@ -77,6 +77,32 @@
             newline = true;
         }
       
+        function equalsBtnPressed() {
+            let value2 = parseInt(document.getElementById('inputBox').value)
+            let finalTotal;
+
+            switch(currentOperator) {
+                case "+": 
+                  finalTotal = value1 + value2
+                  console.log(finalTotal)
+                  break
+                case "-":
+                finalTotal = value1 - value2
+                  console.log(finalTotal)
+                  break
+                  case "x":
+                finalTotal = value1 * value2
+                  console.log(finalTotal)
+                  break
+                  case "/":
+                finalTotal = value1 / value2
+                  console.log(finalTotal)
+                  break
+            }
+            document.getElementById("inputBox").value = finalTotal
+            value1 = 0
+            newline = true
+        }
     </script>
 </body>
 
