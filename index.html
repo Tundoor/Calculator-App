@@ -5,7 +5,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Calculator</title>
-    <script src='./index.js' defer></script>
     <link rel="stylesheet" href="./styles.css">
 </head>
 
@@ -18,31 +17,30 @@
         </tr>
         
         <tr>
-            <td>7</td>
-            <td>8</td>
-            <td>9</td>
-            <td>x</td>
+            <td onclick="digitBtnPressed('7')">7</td>
+            <td onclick="digitBtnPressed('8')">8</td>
+            <td onclick="digitBtnPressed('9')">9</td>
+            <td  onclick="operatorBtnPressed('x')">x</td>
         </tr>
         
         <tr>
-            <td>4</td>
-            <td>5</td>
-            <td>6</td>
-            <td>-</td>
+            <td onclick="digitBtnPressed('4')">4</td>
+            <td onclick="digitBtnPressed('5')">5</td>
+            <td onclick="digitBtnPressed('6')">6</td>
+            <td  onclick="operatorBtnPressed('-')">-</td>
         </tr>
 
         <tr>
-            <td>1</td>
-            <td>2</td>
-            <td>3</td>
-            <td>+</td>
+            <td onclick="digitBtnPressed('1')">1</td>
+            <td onclick="digitBtnPressed('2')">2</td>
+            <td onclick="digitBtnPressed('3')">3</td>
+            <td onclick="operatorBtnPressed('+')">+</td>
         </tr>
 
         <tr>
             <td colspan="2">0</td>
-
-            <td>AC</td>
-            <td>/</td>
+            <td onclick="btnACPressed()">AC</td>
+            <td  onclick="operatorBtnPressed('/')">/</td>
         </tr>
 
         <tr >  
@@ -50,6 +48,36 @@
         </tr>
     </table>
    
+    <script>
+
+    let newline = true; 
+    let value1;
+    let currentOperator;
+
+
+    // Event handler for when any digit button is pressed
+    function digitBtnPressed(button) {
+        if (newline) {
+            document.getElementById("inputBox").value = button
+            newline = false
+        } else {
+            document.getElementById("inputBox").value += button
+       }
+        }
+
+        // AC button  
+        function btnACPressed () {
+            document.getElementById("inputBox").value = 0 
+            newline = true;
+        }
+
+        function operatorBtnPressed (operator) {
+            currentOperator = operator;
+            value1 = parseInt(document.getElementById("inputBox").value);
+            newline = true;
+        }
+      
+    </script>
 </body>
 
 </html>
